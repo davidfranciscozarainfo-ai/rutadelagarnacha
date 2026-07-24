@@ -1,4 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "next build"
+  "buildCommand": "next build",
+  "headers":[
+    {
+      "source": "/(.*)",
+      "headers" : [
+        {
+          "key" : "x-robots-tag",
+          "value" : "noindex"
+        }
+      ]
+    }
+  ],
 }
